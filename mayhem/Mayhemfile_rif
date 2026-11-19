@@ -1,0 +1,9 @@
+project: savantenvs/shadPS4
+target: rif
+cmds:
+  - cmd: /mayhem/mayhem/build/fuzz_rif
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rif/testsuite
